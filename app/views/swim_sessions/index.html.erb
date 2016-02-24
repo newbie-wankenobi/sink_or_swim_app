@@ -1,0 +1,15 @@
+<div class="container">
+  <% @swim_sessions.each do |swim| %>
+  <ul>
+    <li><%= swim.location %></li>
+    <li><%= swim.date %></li>
+    <li><%= swim.pool_length %></li>
+    <li><%= swim.minutes_long %></li>
+    <li><%= swim.user_id %></li>
+    <li><%= swim.created_at %></li>
+    <li><%= swim.updated_at %></li>
+
+  </ul>
+
+  <% end %>
+</div>
