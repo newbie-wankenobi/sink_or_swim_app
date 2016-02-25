@@ -18,7 +18,6 @@ def show
      @swim_sessions = SwimSession.find(params[:id])
    end
 
-# nested route /users/:user_id/mumbles
 def create
   @swim_sessions = @user.swim_sessions.build(swim_sessions_params)
 
@@ -50,7 +49,6 @@ private
     redirect_to new_session_path, alert: 'You must be logged in to continue!' if current_user.nil?
   end
 
-  # nested route /users/:id/mumbles
   def authorize_create
    @user = User.find(params[:user_id])
    redirect_to root_path if @user != current_user
