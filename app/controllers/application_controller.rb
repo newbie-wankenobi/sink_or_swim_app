@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 private
 
      # Make the current_user method available to views, not just controllers!
-    helper_method :current_user
+    helper_method :current_user, :authorize
 
     def current_user
       @current_user ||= User.find(session[:user_id]) if session[:user_id]

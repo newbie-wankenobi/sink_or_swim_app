@@ -1,0 +1,48 @@
++<div class="row text-center">
+ +  <% if flash[:notice] %>
+ +    <h4 class="warning-notice"><%= flash[:notice] %></h4>
+ +  <% end %>
+ +
+ +  <div class="col-xs-6 col-md-4">
+ +    <h3>Create a New Swim Session</h3>
+ +
+ +    <% if @swim_sessions && @swim_sessions.errors %>
+ +      <p>Your swim_sessions failed:</p>
+ +      <ul class="error-messages">
+ +        <% @swim_sessions.errors.full_messages.each do |e| %>
+ +          <li class="warning-notice"><%= e %></li>
+ +        <% end %>
+ +      </ul>
+ +    <% end %>
+ +
+ +    <div class="swim_sessions swim_sessions-new">
+ +      <%= form_for [@user, Swim_Session.new] do |f| %>
+ +        <div class="field form-group">
+ +          <%= f.label :text %>
+ +          <%= f.text_area :text, class: "form-control" %>
+ +        </div>
+ +        <div class="field form-group">
+ +          <%= f.label :image_uri %>
+ +          <%= f.text_field :image_uri, class: "form-control" %>
+ +        </div>
+ +        <div class="field form-group">
+ +          <%= f.label :tags %>
+ +          <%= f.text_field :tags, class: "form-control" %>
+ +        </div>
+ +
+ +        <%= hidden_field_tag "redirect", user_path(@user) %>
+ +
+ +        <div class="actions"><%= f.submit "Share", class: "btn btn-primary" %></div>
+ +      <% end %>
+ +    </div>
+ +  </div>
+ +
+ +  <div class="col-xs-6 col-md-8">
+ +    <h3>Recent Swim Sessions</h3>
+ +    <% @user.swim_sessions.take(10).each do |swim_sessions| %>
+ +      <div class="col-md-6">
+ +          <%= render 'swim_sessions/swim_sessions', swim_sessions: swim_sessions %>
+ +      </div>
+ +    <% end %>
+ +  </div>
+ +</div>
