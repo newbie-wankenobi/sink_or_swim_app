@@ -4,12 +4,6 @@ class SwimSession < ActiveRecord::Base
 
 validate :image_or_text
 
-def self.iterate_every(step, starting=0)
-  every = all
-  total = every.length - 1
-  (starting..total).step(step) { |i| yield every[i] }
-end
-
 def self.all
   super.order created_at: :desc
 end

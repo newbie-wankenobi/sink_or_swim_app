@@ -12,34 +12,4 @@
   </ul>
 
   <% end %>
-
-  <% @circuits.each do |circuit| %>
-  <ul>
-    <li><%= circuit.num_laps %></li>
-    <li><%= circuit.stroke %></li>
-    <li><%= circuit.swim_session_id %></li>
-    <li><%= circuit.created_at %></li>
-    <li><%= circuit.updated_at %></li>
-
-  </ul>
-
-  <% end %>
-
-  <% @users.each do |user| %>
-  <ul>
-    <li><%= user.height %></li>
-    <li><%= user.weight %></li>
-    <li><%= user.born_on %></li>
-    <li><%= user.gender %></li>
-    <li><%= user.email %></li>
-    <li><%= user.first_name %></li>
-    <li><%= user.last_name %></li>
-    <li><%= user.password_digest %></li>
-    <li><%= user.created_at %></li>
-    <li><%= user.updated_at %></li>
-  </ul>
-
-  <% end %>
-
-
 </div>

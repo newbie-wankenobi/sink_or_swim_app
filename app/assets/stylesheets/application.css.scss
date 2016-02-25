@@ -20,7 +20,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
 
-$mumblr-violet:       #382ca3;
+/*$mumblr-violet:       #382ca3;
 $mumblr-violet-light: #5249c0;
 $mumblr-violet-dark:  #30249a;
 
@@ -69,160 +69,160 @@ h5 {
 }
 
 /* Profile Page Jumbotron */
-.jumbotron {
+// .jumbotron {
 
-  background: $mumblr-violet-light;
-  color:      $white;
+//   background: $mumblr-violet-light;
+//   color:      $white;
 
-  margin-bottom: 0;
+//   margin-bottom: 0;
 
-  .splash-image {
-    width:  100%;
-    height: 440px;
+//   .splash-image {
+//     width:  100%;
+//     height: 440px;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px solid green;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     border: 1px solid green;
 
-    background-image: url('/images/frances-ha-big.jpg');
-    background-repeat: no-repeat;
-    background-position: center -140px;
-    overflow-y: hidden;
+//     background-image: url('/images/frances-ha-big.jpg');
+//     background-repeat: no-repeat;
+//     background-position: center -140px;
+//     overflow-y: hidden;
 
-    opacity: 0.05;
-  }
+//     opacity: 0.05;
+//   }
 
-  .user-image {
-    display: inline-block;
-    position: relative;
-  }
+//   .user-image {
+//     display: inline-block;
+//     position: relative;
+//   }
 
-  .text-over-image {
-    top:      50%;
-    left:     0%;
-    width:    100%;
-    position: absolute;
+//   .text-over-image {
+//     top:      50%;
+//     left:     0%;
+//     width:    100%;
+//     position: absolute;
 
-    margin-top: -3em;
-  }
+//     margin-top: -3em;
+//   }
 
-  .text-over-image h1 {
-    margin:  0;
-    padding: 0;
-    color:   $white;
+//   .text-over-image h1 {
+//     margin:  0;
+//     padding: 0;
+//     color:   $white;
 
-    opacity: 0;
+//     opacity: 0;
 
-    transition: 0.25s;
-  }
+//     transition: 0.25s;
+//   }
 
-  .user-image:hover .text-over-image * {
-    opacity: 1;
+//   .user-image:hover .text-over-image * {
+//     opacity: 1;
 
-    transition: 0.25s;
-  }
+//     transition: 0.25s;
+//   }
 
-  .user-image:hover img {
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    opacity: 0.5;
+//   .user-image:hover img {
+//     filter: grayscale(100%);
+//     -webkit-filter: grayscale(100%);
+//     opacity: 0.5;
 
-    transition: 0.25s;
-  }
+//     transition: 0.25s;
+//   }
 
-  h3 { margin-bottom: 0; }
+//   h3 { margin-bottom: 0; }
 
-}
+// }
 
-/* Navbar */
-.navbar-collapse,
-.navbar-form,
-.navbar-toggle,
-.navbar-form {
-  border: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
+// /* Navbar */
+// .navbar-collapse,
+// .navbar-form,
+// .navbar-toggle,
+// .navbar-form {
+//   border: none;
+//   -webkit-box-shadow: none;
+//   box-shadow: none;
+// }
 
-.navbar-form { display: inline-block; }
-.collapsing .navbar-form,
-.collapse.in .navbar-form {
-  display: block;
-}
+// .navbar-form { display: inline-block; }
+// .collapsing .navbar-form,
+// .collapse.in .navbar-form {
+//   display: block;
+// }
 
-.navbar-inverse {
-  background-color: $mumblr-gray;
-  border-color:     $mumblr-gray;
-  border-radius:    0;
-}
-.navbar-brand { line-height: 10px; }
-.nav-logo { height: 100%; }
+// .navbar-inverse {
+//   background-color: $mumblr-gray;
+//   border-color:     $mumblr-gray;
+//   border-radius:    0;
+// }
+// .navbar-brand { line-height: 10px; }
+// .nav-logo { height: 100%; }
 
-/* Mumble rows, columns and containers */
-.row .simple {
-  max-width: 800px;
-  min-width: 400px;
-  display: inline-block;
-}
+// /* Mumble rows, columns and containers */
+// .row .simple {
+//   max-width: 800px;
+//   min-width: 400px;
+//   display: inline-block;
+// }
 
-.mumble-container,
-.comment-container {
-  max-width: 500px;
-  margin: auto auto;
-}
+// .mumble-container,
+// .comment-container {
+//   max-width: 500px;
+//   margin: auto auto;
+// }
 
-/* Mumbles */
-.mumble,
-.comment {
-  border: 1px solid $mumblr-gray;
-  // border-radius:
-  background-color: $white;
-  padding: 1em 1em 0.5em 1em;
-  margin-bottom: 1em;
-}
+// /* Mumbles */
+// .mumble,
+// .comment {
+//   border: 1px solid $mumblr-gray;
+//   // border-radius:
+//   background-color: $white;
+//   padding: 1em 1em 0.5em 1em;
+//   margin-bottom: 1em;
+// }
 
-.mumble-pic {
-  width: 100%;
-  margin-bottom: 1em;
-}
+// .mumble-pic {
+//   width: 100%;
+//   margin-bottom: 1em;
+// }
 
-.mumble-data,
-.comment-data {
-  font-size: 10px;
-  font-family: Arial, san-serif;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: $mumblr-gray;
-  letter-spacing: 1px;
-}
+// .mumble-data,
+// .comment-data {
+//   font-size: 10px;
+//   font-family: Arial, san-serif;
+//   text-transform: uppercase;
+//   font-weight: 600;
+//   color: $mumblr-gray;
+//   letter-spacing: 1px;
+// }
 
-.mumble-data a,
-.comment-data a {
-  font-family: Arial, san-serif;
-  color: $mumblr-violet-light;
-}
+// .mumble-data a,
+// .comment-data a {
+//   font-family: Arial, san-serif;
+//   color: $mumblr-violet-light;
+// }
 
-.mumble-thumbnail {
-  width: 1.5em;
-  vertical-align: bottom;
-  // margin-bottom: -2px;
-}
+// .mumble-thumbnail {
+//   width: 1.5em;
+//   vertical-align: bottom;
+//   // margin-bottom: -2px;
+// }
 
-.mumble-link:link,
-.mumble-link:visited,
-.mumble-link:hover,
-.mumble-link:active {
-  text-decoration: none;
-  color: inherit;
-}
+// .mumble-link:link,
+// .mumble-link:visited,
+// .mumble-link:hover,
+// .mumble-link:active {
+//   text-decoration: none;
+//   color: inherit;
+// }
 
-.tags {
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.5px;
-  color: $mumblr-darkgray;
-}
+// .tags {
+//   font-family: Arial, sans-serif;
+//   font-size: 13px;
+//   letter-spacing: 0.5px;
+//   color: $mumblr-darkgray;
+// }
 
-/* Forms */
-textarea { resize: none; min-height: 100px; }
+// /* Forms */
+// textarea { resize: none; min-height: 100px; }
