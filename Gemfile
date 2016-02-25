@@ -18,6 +18,8 @@ gem 'rails_12factor', group: :production
 
 gem 'pg'
 
+gem 'puma'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
