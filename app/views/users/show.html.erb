@@ -1,11 +1,11 @@
 <h1><%= @user.first_name %></h1>
 
-<h3>My Swim Sessions:</h3>
+  <h3>My Swim Sessions:</h3>
 
-<% @swim_sessions.each do |swim| %>
-  <%= link_to "#{swim.location}", swim_session_path(swim.id) %>
-<p><%= swim.pool_length %> Meters </p>
-<p> Last swim: <%= swim.date %></p>
-<p> Session Length: <%= swim.minutes_long %> minutes </p>
-<p> User ID: <%= swim.user_id %></p>
-<% end %>
+  <% @swim_sessions.each do |swim| %>
+    <%= link_to "#{swim.location}", swim_session_path(swim.id) %>
+  <p><%= swim.pool_length %> Meters </p>
+  <p> Last swim: <%= swim.date %></p>
+  <p> Session Length: <%= swim.minutes_long %> minutes </p>
+  <p> User ID: <%= swim.user_id %></p>
+  <% end %>
