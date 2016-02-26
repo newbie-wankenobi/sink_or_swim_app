@@ -4,40 +4,45 @@ class SwimSessionsController <ApplicationController
   before_action :autherize_destroy, only: [:destroy]
 
   def index
-    if params[:user_id]
-      @users = User.find(params[:user_id])
-      redirect_to user_path(@user) if @user == current_user
-      @circuits = Circuit.search(params[:search]).where(user: @user)
-      @swim_sessions = SwimSession.search(params[:search]).where(user: @user)
-  else
-    @circuits = Circuit.search params[:search]
+    @swim_sessions = SwimSession.all
+  #   if params[:user_id]
+  #     @users = User.find(params[:user_id])
+  #     redirect_to user_path(@user) if @user == current_user
+  #     @circuits = Circuit.search(params[:search]).where(user: @user)
+  #     @swim_sessions = SwimSession.search(params[:search]).where(user: @user)
+  # else
+  #   @circuits = Circuit.search params[:search]
+  # end
   end
-end
 
-def show
-     @swim_sessions = SwimSession.find(params[:id])
-   end
+  def show
+    @swim_sessions = SwimSession.find(params[:id])
+  end
 
-def create
-  @swim_sessions = @user.swim_sessions.build(swim_sessions_params)
+  def new
+    @swim_session = SwimSession.new
+  end
 
-  if @swim_sessions.save
+  def create
+    @swim_sessions = @user.swim_sessions.build(swim_sessions_params)
+
+    if @swim_sessions.save
        flash[:notice] = "You have created a new swim session!"
-
-    if params[:redirect]
-      redirect_to params[:redirect]
+      if params[:redirect]
+        redirect_to params[:redirect]
+      else
+        redirect_to swim_sessions_path(@swim_sessions)
+      end
     else
-      redirect_to swim_sessions_path(@swim_sessions)
+      flash[:alert] = "Creating swim session failed!"
+      render :new
     end
-  else
-    render :"users/show"
   end
-end
 
-def destroy
-  @swim_sessions.destroy
-  redirect_to user_path(current_user)
-end
+  def destroy
+    @swim_sessions.destroy
+    redirect_to user_path(current_user)
+  end
 
 private
 

@@ -17,11 +17,10 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 
-gem 'rails_12factor', group: :production
+
 
 gem 'pg'
 
-gem 'puma'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -45,5 +44,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'thin'
 end
 
