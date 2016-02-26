@@ -20,6 +20,19 @@
 
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
 
+body {
+  background-image: url('../../jaws_sans_words.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  font:  Amity Jack;
+  color: red;
+  background-color: blue;
+
+}
+
 /*$mumblr-violet:       #382ca3;
 $mumblr-violet-light: #5249c0;
 $mumblr-violet-dark:  #30249a;
