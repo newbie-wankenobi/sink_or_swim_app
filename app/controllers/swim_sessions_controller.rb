@@ -16,7 +16,7 @@ class SwimSessionsController <ApplicationController
   end
 
   def show
-    @swim_sessions = SwimSession.find(params[:id])
+    @swim_sessions = SwimSession.find_by(id: params[:id])
   end
 
   def new

@@ -19,12 +19,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by(id: params[:id])
     @swim_sessions_message = "Would you like to go for a swim?"
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = User.find_by(id: params[:id])
 
     @swim_sessions_message = "I will crush my session tonight!"
   end

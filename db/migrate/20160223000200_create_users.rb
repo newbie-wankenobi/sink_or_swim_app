@@ -11,6 +11,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_digest
 
       t.timestamps null: false
-    ends
+    end
   end
 end
