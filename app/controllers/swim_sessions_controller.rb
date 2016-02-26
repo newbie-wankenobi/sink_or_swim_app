@@ -47,7 +47,7 @@ class SwimSessionsController <ApplicationController
 private
 
   def swim_sessions_params
-    params.require(:swim_sessions).permit(:text, :tags, :image_uri)
+    params.require(:swim_sessions).permit(:location, :pool_length, :date, :minutes_long, :user_id)
   end
 
   def authenticate
