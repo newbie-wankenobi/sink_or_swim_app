@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
+    @swim_sessions = @user.swim_sessions
     @swim_sessions_message = "Would you like to go for a swim?"
   end
 

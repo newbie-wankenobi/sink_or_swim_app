@@ -1,0 +1,7 @@
+<h1><%= @user.first_name %></h1>
+
+<h3>My Swim Sessions:</h3>
+
+<% @swim_sessions.each do |swim| %>
+  <%= link_to "#{swim.location}", swim_session_path(swim.id) %>
+<% end %>

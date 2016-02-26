@@ -29,7 +29,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, <%= current_user.first_name %><b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><a href="#">All Users</a></li>
-            <li><a href="#">My Swim Sessions</a></li>
+            <li><%= link_to "My Swim Sessions", user_path(current_user.id) %></li>
             <li><a href="#">My Circuits</a></li>
             <li role="separator" class="divider"></li>
             <li><%= link_to 'Logout', logout_path(current_user) %></li>
