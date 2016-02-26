@@ -3,7 +3,7 @@
   <h3>My Swim Sessions:</h3>
 
   <% @swim_sessions.each do |swim| %>
-    <%= link_to "#{swim.location}", swim_session_path(swim.id) %>
+    <p> Name of pool: <%= link_to "#{swim.location}", swim_session_path(swim.id) %></p>
   <p><%= swim.pool_length %> Meters </p>
   <p> Last swim: <%= swim.date %></p>
   <p> Session Length: <%= swim.minutes_long %> minutes </p>
