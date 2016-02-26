@@ -1,16 +1,16 @@
 <div class="container">
-  <% @users.each do |user| %>
+
   <ul>
-    <li>height : <%= user.height %></li>
-    <li><%= user.weight %></li>
-    <li><%= user.born_on %></li>
-    <li><%= user.gender %></li>
-    <li><%= user.email %></li>
-    <li><%= user.first_name %></li>
-    <li><%= user.last_name %></li>
-    <li><%= user.created_at %></li>
-    <li><%= user.updated_at %></li>
+    <li> Height : <%= @user.height %></li>
+    <li> Weight : <%= @user.weight %></li>
+    <li> DOB : <%= @user.born_on %></li>
+    <li> Gender : <%= @user.gender %></li>
+    <li> Email : <%= @user.email %></li>
+    <li> First Name : <%= @user.first_name %></li>
+    <li> Last Name : <%= @user.last_name %></li>
+    <li> Created :<%= @user.created_at %></li>
+    <li> Updated : <%= @user.updated_at %></li>
   </ul>
 
-  <% end %>
+
 </div>
