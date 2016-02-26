@@ -1,11 +1,13 @@
 <div class="container">
 <% @circuits.each do |circuit| %>
-  <ul>
-    <li><%= circuit.num_laps %></li>
-    <li><%= circuit.stroke %></li>
-    <li><%= circuit.swim_session_id %></li>
-    <li><%= circuit.created_at %></li>
-    <li><%= circuit.updated_at %></li>
+<h2 class="text-center">My Circuit</h2>
+  <ul id="userindexlist">
+    <li class="text-center">Laps: <%= circuit.num_laps %></li>
+    <li class="text-center">Stroke Type: <%= circuit.stroke %></li>
+    <li class="text-center">Swim Session: <%= circuit.swim_session_id %></li>
+    <li class="text-center">Created: <%= circuit.created_at %></li>
+    <li class="text-center">Last Updated: <%= circuit.updated_at %></li>
 
   </ul>
 <% end %>
+

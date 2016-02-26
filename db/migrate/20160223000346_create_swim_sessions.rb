@@ -11,3 +11,4 @@ class CreateSwimSessions < ActiveRecord::Migration
     end
   end
 end
+

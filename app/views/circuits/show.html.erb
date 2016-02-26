@@ -1,11 +1,11 @@
 <!--<h1><%#= @user.first_name %></h1> -->
 
-<h3>My Training Circuit:</h3>
+<h3 class="text-center">My Training Circuit:</h3>
 
 <% @circuits.each do |swim| %>
 
-  <p> Laps: <%= swim.num_laps %></p>
-  <p> Session ID: <%= swim.swim_session_id %></p>
-  <p> Created: <%= swim.created_at %></p>
-  <p> Updated: <%= swim.updated_at %></p>
+  <p class="text-center"> Laps: <%= swim.num_laps %></p>
+  <p class="text-center"> Session ID: <%= swim.swim_session_id %></p>
+  <p class="text-center"> Created: <%= swim.created_at %></p>
+  <p class="text-center"> Updated: <%= swim.updated_at %></p>
 <% end %>

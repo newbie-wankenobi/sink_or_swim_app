@@ -5,14 +5,6 @@ class SwimSessionsController <ApplicationController
 
   def index
     @swim_sessions = SwimSession.all
-  #   if params[:user_id]
-  #     @users = User.find(params[:user_id])
-  #     redirect_to user_path(@user) if @user == current_user
-  #     @circuits = Circuit.search(params[:search]).where(user: @user)
-  #     @swim_sessions = SwimSession.search(params[:search]).where(user: @user)
-  # else
-  #   @circuits = Circuit.search params[:search]
-  # end
   end
 
   def show
