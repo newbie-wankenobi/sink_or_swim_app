@@ -1,33 +1,58 @@
+<h1>Edit</h1>
 <%= form_for @user do |f| %>
-
   <% if @user.errors.any? %>
-    <h4>Form is invalid:</h4>
-    <ul class="error-messages">
-      <% @user.errors.full_messages.each do |message| %>
-        <li class="warning-notice"><%= message %></li>
-      <% end %>
-    </ul>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
   <% end %>
+  <div class="field">
+   <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
 
-  <div class="field form-group">
+  <div class="field">
+    <%= f.label :height %>
+    <%= f.text_field :height %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weight %>
+    <%= f.text_field :weight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :born_on %>
+    <%= f.date_select :born_on %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= f.label :created_at %>
+    <%= f.text_field :created_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :updated_at %>
+    <%= f.text_field :updated_at %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %>
-    <%= f.text_field :email, class: "form-control" %>
+    <%= f.text_field :email %>
   </div>
-  <div class="field form-group">
-    <%= f.label :handle %>
-    <%= f.text_field :handle, class: "form-control" %>
-  </div>
-  <div class="field form-group">
-    <%= f.label :profile_image_uri, "Profile Image Link" %>
-    <%= f.text_field :profile_image_uri, class: "form-control" %>
-  </div>
-  <div class="field form-group">
-    <%= f.label :password %>
-    <%= f.password_field :password, class: "form-control" %>
-  </div>
-  <div class="field form-group">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, class: "form-control" %>
-  </div>
-  <div class="actions"><%= f.submit "Submit", class: "btn btn-default" %></div>
+
+  <div class="actions"><%= f.submit %></div>
 <% end %>

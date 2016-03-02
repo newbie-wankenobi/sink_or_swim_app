@@ -20,20 +20,33 @@
 
 @import url(https://fonts.googleapis.com/css?family=EB+Garamond);
 
+@font-face {
+  font-family: 'amity_jack';
+  src: url('amity_jack.ttf');
+  src: url('amity_jack.ttf') format('truetype');
+}
+
+.navbar-brand {
+  font-family: 'amity_jack';
+  color: red;
+}
+
 body {
-  background-image: url('../../jaws_sans_words.jpg');
+  background-image: url('amit.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
 
 header {
-  font:  Amity Jack;
-  color: red;
-  background-color: blue;
 
 }
 
-container {
+.container {
   color: black;
-  background-color: rgba(255,255,255, 0.8);
+  background-color: rgba(255,255,255, 0.6);
+}
+
+.text-center {
+  color: black;
+  background-color: rgba(255,255,255, 0.6);
 }
