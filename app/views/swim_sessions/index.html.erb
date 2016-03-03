@@ -8,8 +8,14 @@
     <p class="text-center"> Last swim: <%= swim.date %></p>
     <p class="text-center"> Session Length: <%= swim.minutes_long %> minutes </p>
     <p class="text-center"> User ID: <%= swim.user_id %></p>
+    <div class="text-center">
+      <h4><%= button_to "Delete", swim_session_path(swim), :method => :delete, data: {:confirm => "Are you sure you want to Delete your post?"} %></h4>
+    </div>
   <% end %>
 
+  <div class="text-center">
+    <button><%= link_to "Create Session", new_swim_session_path %></button>
+  </div>
 
 
 

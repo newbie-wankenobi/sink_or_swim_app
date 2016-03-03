@@ -1,1 +1,29 @@
 <p>New Swim Session</p>
+
+<%= form_for @swim_session do |swim| %>
+
+  <div>
+    <%= swim.label :location %>
+    <%= swim.text_field :location %>
+  </div>
+
+  <div>
+    <%= swim.label :pool_length %>
+    <%= swim.text_field :pool_length %>
+  </div>
+
+  <div>
+    <%= swim.label :date %>
+    <%= swim.text_field :date %>
+  </div>
+
+  <div>
+    <%= swim.label :minutes_long %>
+    <%= swim.text_field :minutes_long %>
+  </div>
+
+<%= swim.submit "Update this session!" %>
+
+<% end %>
+
+<%= link_to "Back to Swim Sessions", swim_sessions_path %>

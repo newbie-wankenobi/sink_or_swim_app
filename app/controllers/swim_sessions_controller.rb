@@ -1,7 +1,7 @@
 class SwimSessionsController <ApplicationController
   before_action :authenticate,      only: [:create, :destroy]
-  before_action :autherize_create,  only: [:create]
-  before_action :autherize_destroy, only: [:destroy]
+  before_action :authorize_create,  only: [:create]
+  before_action :authorize_destroy, only: [:destroy]
 
   def index
     @user = current_user
@@ -17,7 +17,7 @@ class SwimSessionsController <ApplicationController
   end
 
   def create
-    @swim_sessions = @user.swim_sessions.build(swim_sessions_params)
+    @swim_sessions = @user.swim_sessions.new(swim_sessions_params)
 
     if @swim_sessions.save
        flash[:notice] = "You have created a new swim session!"
@@ -33,14 +33,15 @@ class SwimSessionsController <ApplicationController
   end
 
   def destroy
+    @swim_sessions = SwimSession.find(params[:id])
     @swim_sessions.destroy
-    redirect_to user_path(current_user)
+    redirect_to swim_sessions_path
   end
 
 private
 
   def swim_sessions_params
-    params.require(:swim_sessions).permit(:location, :pool_length, :date, :minutes_long, :user_id)
+    params.require(:swim_session).permit(:location, :pool_length, :date, :minutes_long, :user_id)
   end
 
   def authenticate
@@ -48,7 +49,7 @@ private
   end
 
   def authorize_create
-   @user = User.find(params[:user_id])
+   @user = User.find(current_user.id)
    redirect_to root_path if @user != current_user
   end
 
