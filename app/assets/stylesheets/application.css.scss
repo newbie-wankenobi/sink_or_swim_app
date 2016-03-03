@@ -22,8 +22,8 @@
 
 @font-face {
   font-family: 'amity_jack';
-  src: url('amity_jack.ttf');
-  src: url('amity_jack.ttf') format('truetype');
+  src: font-url('amity_jack.ttf');
+  src: font-url('amity_jack.ttf') format('truetype');
 }
 
 .navbar-brand {
@@ -32,7 +32,7 @@
 }
 
 body {
-  background-image: url('amit.jpg');
+  background-image: image-url('amit.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
