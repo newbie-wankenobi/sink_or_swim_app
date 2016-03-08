@@ -41,19 +41,9 @@ class UsersController < ApplicationController
     end
   end
 
-  # def create
-    # @post = Post.new
-    # @comment = @post.comments.create(user_params)
-    # @comment.user_id = current_user.id
-    # if @comment.save
-      # redirect_to @post
-    # else
-      # flash.now[:danger] = "error"
-    # end
-  # end
 
   private
-    # Implement Strong Params
+
     def user_params
       params.require(:user).permit(:first_name, :last_name, :height, :weight, :born_on, :gender, :created_at, :udpated_at, :email, :password, :password_confirmation)
     end
