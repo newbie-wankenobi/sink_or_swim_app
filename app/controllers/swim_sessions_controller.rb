@@ -55,6 +55,7 @@ private
 
   def authorize_destroy
    @swim_sessions = SwimSession.find(params[:id])
-   redirect_to root_path if @swim_sessions.user != current_user
+   flash[:message] = "You do not have access to this session."
+   redirect_to swim_sessions_path if @swim_sessions.user != current_user
   end
 end

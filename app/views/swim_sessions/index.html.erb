@@ -2,6 +2,10 @@
 
   <h3 class="text-center">My Swim Sessions:</h3>
 
+  <% if flash[:message] %>
+    <p><%= flash[:message] %></p>
+  <% end %>
+
   <% @swim_sessions.each do |swim| %>
     <p class="text-center"> Name of pool: <%= link_to "#{swim.location}", swim_session_path(swim.id) %></p>
     <p class="text-center"><%= swim.pool_length %> Meters </p>
