@@ -1,3 +1,11 @@
 #user-index-list {
   list-style: none;
 }
+
+form * {
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+}
+
+
