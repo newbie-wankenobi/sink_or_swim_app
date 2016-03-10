@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20160223000427) do
     t.integer  "num_laps"
     t.string   "stroke"
     t.integer  "swim_session_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    # t.datetime "created_at",      null: false
+    # t.datetime "updated_at",      null: false
   end
 
   add_index "circuits", ["swim_session_id"], name: "index_circuits_on_swim_session_id", using: :btree
@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 20160223000427) do
     t.date     "date"
     t.integer  "minutes_long"
     t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    # t.datetime "created_at",   null: false
+    # t.datetime "updated_at",   null: false
   end
 
   add_index "swim_sessions", ["user_id"], name: "index_swim_sessions_on_user_id", using: :btree
@@ -47,8 +47,8 @@ ActiveRecord::Schema.define(version: 20160223000427) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    # t.datetime "created_at",      null: false
+    # t.datetime "updated_at",      null: false
   end
 
   add_foreign_key "circuits", "swim_sessions"
