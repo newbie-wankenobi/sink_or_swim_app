@@ -4,8 +4,7 @@ class SwimSessionsController <ApplicationController
   before_action :authorize_destroy, only: [:destroy]
 
   def index
-    @user = current_user
-    @swim_sessions = SwimSession.all
+    @swim_sessions = current_user.swim_sessions
   end
 
   def show
