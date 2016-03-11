@@ -6,8 +6,12 @@ Sink Or Swim is an interactive web app that tracks a user's workout statistics. 
 
 [Trello](https://trello.com/b/5RDxsCOG/sink-or-swim)
 
+
+ERD for Sink or Swim:
 ![Imgur](http://i.imgur.com/iZOiyNH.jpg)
 
+
+Wireframe for Sink or Swim:
 ![Imgur](http://i.imgur.com/P6AH0qf.png)
 
 
